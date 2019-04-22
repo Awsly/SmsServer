@@ -7,7 +7,7 @@ import java.util.List;
 
 import com.chinasofti.dao.employeeDao;
 import com.chinasofti.domain.shopcar;
-import com.chinasofti.studentmanager.util.DBUtil;
+import com.chinasofti.util.DBUtil;
 
 public class employeeDaoImpl implements employeeDao {
 	//创建dbutil变量

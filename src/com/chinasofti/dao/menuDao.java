@@ -11,18 +11,18 @@ public interface menuDao {
 	//查询菜品种类的方法
 	public List<menu> Selectgreens();
 	//修改菜品种类的方法
-	public boolean Updategreens();
+	public boolean Updategreens(int id);
 	//删除菜品种类的方法
-	public boolean Deletegreens();
+	public boolean Deletegreens(int id);
 
 	
 	//增加菜品分类的方法
-	public boolean Addvegetables();
+	public boolean Addvegetables(kind k);
 	//查询菜品分类的方法
 	public List<kind> Selectvegetables();
 	//修改菜品分类的方法
-	public boolean Updatevegetables();
+	public boolean Updatevegetables(kind k);
 	//删除菜品分类的方法
-	public boolean Deletevegetables();
+	public boolean Deletevegetables(int id);
 	
 }

@@ -1,4 +1,4 @@
-package com.chinasofti.studentmanager.util;
+package com.chinasofti.util;
 
 import java.util.Scanner;
 //工具类   用于处理用户输入信息的验证

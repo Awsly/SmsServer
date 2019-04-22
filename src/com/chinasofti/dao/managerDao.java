@@ -3,6 +3,7 @@ package com.chinasofti.dao;
 import java.util.List;
 
 import com.chinasofti.domain.employee;
+import com.chinasofti.domain.statistics;
 
 public interface managerDao {
 	//添加员工的方法
@@ -14,7 +15,7 @@ public interface managerDao {
 	//删除员工的方法
 	public boolean Deleteemployee(int id);
 	//统计菜品销售量的方法
-	public int Statistics(int id);
+	public List<statistics> Statistics();
 	//通过id查找员工的方法
 	public List<employee> Selectemployee(int id);
 	//冻结会员卡的方法

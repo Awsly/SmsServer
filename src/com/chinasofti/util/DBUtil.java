@@ -1,4 +1,4 @@
-package com.chinasofti.studentmanager.util;
+package com.chinasofti.util;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

@@ -13,34 +13,34 @@ public class menu {
 		this.kid = kid;
 	}
 	
-	public int getMmid() {
+	public int getmmid() {
 		return mmid;
 	}
-	public void setMmid(int mmid) {
+	public void setmmid(int mmid) {
 		this.mmid = mmid;
 	}
-	public String getMmname() {
+	public String getmmname() {
 		return mmname;
 	}
-	public void setMmname(String mmname) {
+	public void setmmname(String mmname) {
 		this.mmname = mmname;
 	}
-	public double getPrice() {
+	public double getprice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setprice(double price) {
 		this.price = price;
 	}
-	public int getKid() {
+	public int getkid() {
 		return kid;
 	}
-	public void setKid(int kid) {
+	public void setkid(int kid) {
 		this.kid = kid;
 	}
 	
 	@Override
 	public String toString() {
 		
-		return this.getMmid()+"\t\t"+this.getMmname()+"\t\t"+this.getPrice()+"\t\t"+this.getKid();
+		return this.getmmid()+"\t\t"+this.getmmname()+"\t\t"+this.getprice()+"\t\t"+this.getkid();
 	}
 }

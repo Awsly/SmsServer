@@ -8,13 +8,14 @@ import java.util.Scanner;
 
 import com.chinasofti.dao.managerDao;
 import com.chinasofti.domain.employee;
-import com.chinasofti.studentmanager.util.DBUtil;
+import com.chinasofti.domain.statistics;
+import com.chinasofti.util.DBUtil;
 
 public class manmagerDaoImpl implements managerDao {
-	
+	Scanner sc=new Scanner(System.in);
 	//创建dbutil变量
 	private DBUtil db;
-	Scanner sc=new Scanner(System.in);
+	
 	//添加员工的实现
 	@Override
 	public boolean Addemployee(employee emp) {
@@ -103,19 +104,24 @@ public class manmagerDaoImpl implements managerDao {
 
 	//账单统计  统计菜品卖出的数量
 	@Override
-	public int Statistics(int id) {
+	public List<statistics> Statistics() {
 		//实例化dbutil对象
 		this.db=new DBUtil();
 		//创建sql语句
-		String sql="select count(*) from employee where eid="+id;
+		String sql="select mmname 名称,count(*) 数量,sum(price) 总价格 from Statistics group by mmname";
+		ResultSet se;
 		try {
-			ResultSet i = this.db.query(sql);
-			int number=i.getInt(id);
-			return number;
+			se = this.db.query(sql);
+			//创建一个list集合用于存储所有的员工
+			List<statistics> list=new ArrayList<statistics>();
+			while(se.next()){
+				list.add(new statistics(se.getInt("mmid"),se.getString("mmname"),se.getDouble("price")));
+			}
+			return list;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return 0;
+		return null;
 	}
 
 	//通过id查找员工

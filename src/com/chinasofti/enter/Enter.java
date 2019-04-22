@@ -1,12 +1,11 @@
 package com.chinasofti.enter;
 
-import com.chinasofti.control.Control;
+import com.chinasofti.control.control;
 
 public class Enter {
 
 	public static void main(String[] args) {
-		new Control().start();
-
+		new control().start();
 	}
 
 }
